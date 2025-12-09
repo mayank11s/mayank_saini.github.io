@@ -1,0 +1,300 @@
+/* --- Global Styles & Reset --- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+    --primary-color: #2563eb; /* Modern Blue */
+    --dark-bg: #0f172a;       /* Deep Slate */
+    --card-bg: #1e293b;       /* Lighter Slate */
+    --text-main: #f8fafc;     /* Off-white */
+    --text-muted: #94a3b8;    /* Grey text */
+    --header-height: 70px;
+    --transition-speed: 0.3s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--dark-bg);
+    color: var(--text-main);
+    padding-top: var(--header-height); /* Prevent content hiding behind fixed header */
+    overflow-x: hidden;
+}
+
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+
+/* --- Fixed Header --- */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--header-height);
+    background-color: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    z-index: 1000;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-item {
+    position: relative;
+    cursor: pointer;
+    font-weight: 600;
+    padding: 10px 0;
+}
+
+.nav-item:hover { color: var(--primary-color); }
+
+/* Dropdown Menu */
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--card-bg);
+    border: 1px solid rgba(255,255,255,0.1);
+    min-width: 200px;
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    border-radius: 8px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+.nav-item:hover .dropdown-menu {
+    display: flex; /* Show on hover */
+    animation: fadeIn 0.2s ease-in-out;
+}
+
+.dropdown-item {
+    padding: 12px 20px;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    transition: background 0.2s;
+    white-space: nowrap;
+}
+
+.dropdown-item:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    width: 35px;
+    height: 35px;
+    background: var(--card-bg);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s, background 0.2s;
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+.social-icons a:hover {
+    transform: translateY(-3px);
+    background: var(--primary-color);
+}
+
+/* --- Hero Section (Index) --- */
+/* style.css */
+.hero {
+    text-align: center;
+    padding: 100px 20px; /* Increased padding for better spacing */
+    /* This combines a dark, semi-transparent gradient overlay with your background image */
+    background: linear-gradient(180deg, rgba(15, 23, 42, 0.85) 0%, rgba(30, 41, 59, 0.95) 100%), url('path/to/your/background-image.jpg');
+    /* Ensure the image covers the entire area and is centered */
+    background-size: cover;
+    background-position: center;
+    /* Curved bottom edge */
+    border-bottom-left-radius: 50% 30px;
+    border-bottom-right-radius: 50% 30px;
+    color: var(--text-main);
+    position: relative;
+
+    background-image: url("res/images/bg.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--primary-color);
+    margin-bottom: 20px;
+    box-shadow: 0 0 20px rgba(37, 99, 235, 0.4);
+}
+
+.hero-about {
+    max-width: 600px;
+    margin: 0 auto;
+    background: rgba(255,255,255,0.05);
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* --- Tabs --- */
+.tabs-container {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.tab-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: 10px 30px;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s;
+}
+
+.tab-btn.active {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+/* --- List Items (Index) --- */
+.content-container {
+    max-width: 1000px;
+    margin: 0 auto 50px auto;
+    padding: 0 20px;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    background: var(--card-bg);
+    margin-bottom: 50px;                                /* update*/
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.05);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+/* Alternating Layout for List */
+.card:nth-child(even) { flex-direction: row-reverse; }
+
+.card-img-wrapper {
+    width: 40%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+/* Hover Effect: Scale Image */
+.card:hover .card-img { transform: scale(1.1); }
+.card:hover { border-color: var(--primary-color); }
+
+.card-content {
+    width: 60%;
+    padding: 30px;
+}
+
+.arrow-indicator {
+    display: inline-block;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+/* --- Detail Page Specifics --- */
+.detail-header {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.main-project-img {
+    width: 100%;
+    max-width: 900px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 16px;
+    margin: 20px auto;
+    display: block;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+}
+
+.detail-about {
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.zig-zag-container {
+    max-width: 1000px;
+    margin: 0 auto 100px auto;
+    padding: 0 20px;
+}
+
+.detail-row {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+/* Zig Zag Logic */
+.detail-row:nth-child(even) { flex-direction: row-reverse; }
+
+.detail-row img {
+    width: 45%;
+    border-radius: 12px;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.3);
+}
+
+.detail-text {
+    width: 50%;
+}
+
+.detail-text h3 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    border-bottom: 2px solid var(--primary-color);
+    display: inline-block;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}

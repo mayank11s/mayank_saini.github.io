@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="nav-links">
+            <div class="nav-item">
+                Projects ▼
+                <div class="dropdown-menu" id="project-dropdown">
+                    </div>
+            </div>
+            <div class="nav-item">
+                Experience ▼
+                <div class="dropdown-menu" id="experience-dropdown">
+                    </div>
+            </div>
+        </div>
+
+        <div class="social-icons">
+            <a href="https://linkedin.com" target="_blank">in</a>
+            <a href="https://github.com" target="_blank">git</a>
+            <a href="mailto:email@gmail.com" target="_blank">@</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <!-- <img src="res/images/image.png" alt = "bg" class="banner"> -->
+        <img src="res/images/Dungeon banner.png" alt="Profile" class="hero-img">
+        <div class="hero-about">
+            <h2>Hi, I'm a Unity Game Developer</h2>
+            <p>Welcome to my portfolio. Use the tabs below to explore my work and professional journey.</p>
+        </div>
+    </section>
+
+    <div class="tabs-container">
+        <button class="tab-btn active" data-tab="projects">Projects</button>
+        <button class="tab-btn" data-tab="experience">Experience</button>
+    </div>
+
+    <section id="list-container" class="content-container">
+        </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
