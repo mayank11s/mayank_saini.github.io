@@ -251,7 +251,7 @@ const portfolioData = {
             id: "p10",
             title: "Snap Stack (Mobile)",
             brief: "A fast-paced local two-player card game focused on quick reflexes and deck management.",
-            mainImg: "res\\images\\Card.png",
+            mainImg: "res\\images\\Cardgame.png",
             videoUrl: "https://res.cloudinary.com/dpxmy2gbf/video/upload/v1773241231/Card_Game_npr9no.mp4",
             about: `Players take turns playing one card at a time into a center pile. 
             If a player throws a card that matches the number of the card played right before it, 
