@@ -1,0 +1,27 @@
+name: Cache Buster
+
+on:
+  push:
+    branches:
+      - main  # Change this to 'master' if your default branch is named master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Add Versioning to CSS and JS
+        run: |
+          # This replaces 'style.css' with 'style.css?v=COMMIT_ID' in all .html files
+          sed -i "s/style.css/style.css?v=${{ github.sha }}/g" *.html
+          
+          # Optional: Do the same for your main JS file if you have one
+          # sed -i "s/script.js/script.js?v=${{ github.sha }}/g" *.html
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: .
