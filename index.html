@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css?v=a8e6197a131518090d63d5b42a842e8c5c75c92d">
+</head>
+<body>
+
+    <header>
+        <div class="nav-links">
+            <a href="index.html" class="nav-item" style="text-decoration: none; color: inherit;">
+                Home
+            </a>
+            
+            <div class="nav-item">
+                Projects ▼
+                <div class="dropdown-menu" id="project-dropdown"></div>
+            </div>
+            <div class="nav-item">
+                Experience ▼
+                <div class="dropdown-menu" id="experience-dropdown"></div>
+            </div>
+        </div>
+
+        <div class="social-icons">
+            <a href="http://linkedin.com/in/contact-mayanksaini" target="_blank">in</a>
+            <a href="https://github.com/mayank11s" target="_blank">git</a>
+            <a href="mailto:mayank1175s@gmail.com" target="_blank">@</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <!-- <img src="res/images/image.png" alt = "bg" class="banner"> -->
+        <img src="res/images/Avatar.png" alt="Profile" class="hero-img">
+        <div class="hero-about">
+            <h2>Hi, I'm a Unity Game Developer</h2>
+            <p>Welcome to my portfolio. Use the tabs below to explore my work and professional journey.</p>
+        </div>
+    </section>
+
+    <div class="tabs-container">
+        <button class="tab-btn active" data-tab="projects">Projects</button>
+        <button class="tab-btn" data-tab="experience">Experience</button>
+    </div>
+
+    <section id="list-container" class="content-container">
+        </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
