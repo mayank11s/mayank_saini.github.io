@@ -23,7 +23,7 @@ const portfolioData = {
             title: "AI NPC (Desktop)",
             brief: "An interactive AI NPC system featuring local LLM dialogue generation, real-time voice generation, and lip-syncing.",
             mainImg: "res\\images\\NPC.png",
-            videoUrl: "https://res.cloudinary.com/dpxmy2gbf/video/upload/v1773241260/tank_gameplay_zklhyp.mp4",
+            videoUrl: "https://res.cloudinary.com/dpxmy2gbf/video/upload/v1773241323/Ai_Npc_kggiqi.mp4",
             about: "This project introduces a fully dynamic interrogation mechanic. Player input is processed by a locally hosted LLaMA model via Ollama, strictly governed by a custom JSON architecture to maintain personality and context. The generated text is then converted into speech in real-time, driving procedural lip-sync animations for a highly immersive, unscripted character interaction.",
             details: [
                 {
@@ -45,7 +45,7 @@ const portfolioData = {
             title: "Procedural Dungeon Generation (Desktop)",
             brief: "A highly customizable procedural generation system utilizing grid-based logic and the A* algorithm to create infinite, playable environments.",
             mainImg: "res\\images\\Dungeon banner.png",
-            videoUrl: "https://res.cloudinary.com/dpxmy2gbf/video/upload/v1773241260/tank_gameplay_zklhyp.mp4",
+            videoUrl: "https://res.cloudinary.com/dpxmy2gbf/video/upload/v1773241743/Dungeon_Gen_Video_ifrykt.mp4",
             about: "This Unity procedural generator uses a grid architecture to spawn dimension-bounded rooms. It enforces 'void area' spatial rules to prevent overlapping geometry and intelligently connects corridors via A* pathfinding. The result is a fully navigable, atmospheric dungeon featuring randomized intersections and dynamic door sockets.",
             details: [
                 {
@@ -74,8 +74,8 @@ const portfolioData = {
             id: "p4",
             title: "Fun Run (Mobile)",
             brief: "An endless runner game made from scratch.",
-            mainImg: "res\\images\\Dungeon banner.png",
-            videoUrl: "https://res.cloudinary.com/dpxmy2gbf/video/upload/v1773241260/tank_gameplay_zklhyp.mp4",
+            mainImg: "res\\images\\Fun_Run.png",
+            videoUrl: "https://res.cloudinary.com/dpxmy2gbf/video/upload/v1773241251/Fun_Run_mknd77.mp4",
             about: `This project showcases a 3D endless runner game developed entirely from scratch. 
             It features a modular level generation system, optimized player controller, 
             dynamic obstacle spawning, and scalable difficulty progression to ensure 
@@ -102,8 +102,8 @@ const portfolioData = {
             id: "p5",
             title: "VolleyBall Smash (Desktop)",
             brief: "A fast-paced local multiplayer game built for smooth controls, balanced mechanics, and competitive replayability.",
-            mainImg: "res\\images\\Dungeon banner.png",
-            videoUrl: "https://res.cloudinary.com/dpxmy2gbf/video/upload/v1773241260/tank_gameplay_zklhyp.mp4",
+            mainImg: "res\\images\\Volleyball.png",
+            videoUrl: "https://res.cloudinary.com/dpxmy2gbf/video/upload/v1773241258/Volleyball_arnp5n.mp4",
             about: `This project is a local 2-player game with a focus on competitive and responsive gameplay.
             It supports simultaneous input handling on a single device, 
             ensuring smooth and fair interaction between both players.`,
@@ -130,8 +130,8 @@ const portfolioData = {
             id: "p6",
             title: "Ball Maze (Mobile)",
             brief: "2D Ball Maze puzzle game .",
-            mainImg: "res\\images\\Dungeon banner.png",
-            videoUrl: "https://res.cloudinary.com/dpxmy2gbf/video/upload/v1773241260/tank_gameplay_zklhyp.mp4",
+            mainImg: "res\\images\\BallMaze5.png",
+            videoUrl: "https://res.cloudinary.com/dpxmy2gbf/video/upload/v1773241275/Ball_Maze_x05lhm.mp4",
             about: `A 2D gyro-controlled puzzle game inspired by classic ball mechanics, 
             where the objective is to guide balls into the center. It features interactive elements such as locked doors, 
             portals, and rotating levels to add complexity and challenge. The system is designed with a scalable architecture that supports expanding levels.`,
@@ -167,8 +167,8 @@ const portfolioData = {
             id: "p7",
             title: "Tap Blast (Mobile)",
             brief: "A fast-paced 2D tap game focused on reflex, timing, and smooth responsive gameplay.",
-            mainImg: "res\\images\\Dungeon banner.png",
-            videoUrl: "https://res.cloudinary.com/dpxmy2gbf/video/upload/v1773241260/tank_gameplay_zklhyp.mp4",
+            mainImg: "res\\images\\TapBlast.png",
+            videoUrl: "https://res.cloudinary.com/dpxmy2gbf/video/upload/v1773241440/2d_Tap_Game_zeawbf.mp4",
             about: `This is a 2D tap-based game built around quick reflexes and simple but addictive mechanics. 
             The core idea is easy to understand, but the challenge ramps up as the pace increases, pushing the player’s timing and focus. 
             I designed the system to feel responsive and smooth, making sure every tap registers cleanly.`,
@@ -200,8 +200,8 @@ const portfolioData = {
             title: "Neon Catch (Mobile)",
             brief: "2d Neon color cube catch game.",
             brief: "A minimalist 2D arcade game focused on quick lane-switching and reflexes.",
-            mainImg: "res\\images\\Dungeon banner.png",
-            videoUrl: "https://res.cloudinary.com/dpxmy2gbf/video/upload/v1773241260/tank_gameplay_zklhyp.mp4",
+            mainImg: "res\\images\\NeonCatch.png",
+            videoUrl: "https://res.cloudinary.com/dpxmy2gbf/video/upload/v1773241258/Neon_Catch_dpo7ms.mp4",
             about: `A fast-paced reflex game where players must quickly react to catch falling cubes. The mechanics are highly stripped down, focusing purely on timing, hand-eye coordination, and beating high scores as the falling speed progressively increases.`,
             details: [
                 {
@@ -225,8 +225,8 @@ const portfolioData = {
             id: "p9",
             title: "Ball In Hole (Mobile)",
             brief: "A minimalist 3D puzzle game utilizing gyroscopic controls to navigate a ball through precarious mazes.",
-            mainImg: "res\\images\\Dungeon banner.png",
-            videoUrl: "https://res.cloudinary.com/dpxmy2gbf/video/upload/v1773241260/tank_gameplay_zklhyp.mp4",
+            mainImg: "res\\images\\Ball_In_Hole.png",
+            videoUrl: "https://res.cloudinary.com/dpxmy2gbf/video/upload/v1773241494/Ball_In_Hole_dxu8wv.mp4",
             about: `The core gameplay mechanics involve gyroscopic motion control, 
             requiring players to navigate a ball through intricate 3D environments. 
             Success depends on strategic pathfinding and precision handling to reach the goal while avoiding falls into the void.`,
@@ -251,8 +251,8 @@ const portfolioData = {
             id: "p10",
             title: "Snap Stack (Mobile)",
             brief: "A fast-paced local two-player card game focused on quick reflexes and deck management.",
-            mainImg: "res\\images\\Dungeon banner.png",
-            videoUrl: "https://res.cloudinary.com/dpxmy2gbf/video/upload/v1773241260/tank_gameplay_zklhyp.mp4",
+            mainImg: "res\\images\\card.png",
+            videoUrl: "https://res.cloudinary.com/dpxmy2gbf/video/upload/v1773241231/Card_Game_npr9no.mp4",
             about: `Players take turns playing one card at a time into a center pile. 
             If a player throws a card that matches the number of the card played right before it, 
             the player who just went must pick up the entire pile. The goal is to get rid of your hand, 
@@ -279,33 +279,64 @@ const portfolioData = {
     experience: [
         {
             id: "e1",
-            title: "Heilmwater Studios",
-            brief: "Lead programmer on a project from concept to launch, also contributed to a 3d open world game.",
-            mainImg: "https://placehold.co/800x400/16a34a/white?text=TechCorp+Office",
-            videoUrl: "https://res.cloudinary.com/dpxmy2gbf/video/upload/v1773241260/tank_gameplay_zklhyp.mp4",
-            about: `At Heilmwater Studios, I was the sole programmer on a potion-making game, 
-            
-            handling all gameplay code and system development from concept to completion. 
-            I worked closely with artists and designers to turn ideas into functional mechanics, 
-            improve team workflow, and maintain clear project documentation. 
-            I also contributed to system development for a 3D world game, 
-            expanding my experience in larger gameplay architecture.`,
+            title: "Unity Programmer | Heilmwater Studios",
+            brief: "Completed an 8-month internship developing core mechanics for an open-world RPG and serving as Lead Programmer on an alchemy simulator.",
+            mainImg: "https://placehold.co/800x400/16a34a/white?text=Heilmwater+Studios",
+            // videoUrl: "res\\videos\\Internship_Project_Prototype3.mp4",
+            about: `During my 8-month tenure at Heilmwater Studios, I contributed to two major mobile titles. I started on 'Legends of Heilmwater,' an unreleased 3D open-world game, where I engineered essential player traversal mechanics and assisted with level design. I then transitioned to Lead Programmer for 'Apotheosis of Ainoi,' an alchemy simulation game. For this title, I built the entire codebase from scratch, managing everything from the core crafting logic to cross-discipline coordination between the art and design teams.`,
             details: [
-                { img: "https://placehold.co/400x300/1e293b/white?text=Team+Meet", title: "Leadership", desc: "Mentored junior devs." },
-                { img: "https://placehold.co/400x300/1e293b/white?text=Code+Review", title: "Quality", desc: "Implemented CI/CD pipelines." }
+                { 
+                    img: "https://placehold.co/400x300/1e293b/white?text=Progression+Loop", 
+                    title: "Automated Game Loops", 
+                    desc: "Engineered the core progression system for 'Apotheosis of Ainoi,' allowing players to upgrade from manual harvesting and grinding to a fully automated pipeline connected by item-transfer portals." 
+                },
+                { 
+                    img: "https://placehold.co/400x300/1e293b/white?text=Traversal+Mechanics", 
+                    title: "Open-World Mechanics", 
+                    desc: "Developed robust player traversal systems for a 3D open-world environment, including stamina management, dynamic dashing, and fluid swimming mechanics." 
+                },
+                { 
+                    img: "https://placehold.co/400x300/1e293b/white?text=Architecture", 
+                    title: "System Architecture", 
+                    desc: "Designed and implemented the foundational code architecture for the alchemy simulator, ensuring scalable and optimized systems for the crafting economy and machine upgrades." 
+                },
+                { 
+                    img: "https://placehold.co/400x300/1e293b/white?text=Documentation", 
+                    title: "Technical Leadership", 
+                    desc: "Bridged the gap between the programming, art, and design departments while writing and maintaining comprehensive technical documentation for both game projects." 
+                }
             ]
         },
         {
             id: "e2",
-            title: "Freelance Designer",
-            brief: "Created UI/UX designs for 10+ international clients.",
-            mainImg: "https://placehold.co/800x400/ea580c/white?text=Design+Studio",
-            videoUrl: "https://res.cloudinary.com/dpxmy2gbf/video/upload/v1773241260/tank_gameplay_zklhyp.mp4",
-            about: "Specialized in minimalist and accessibility-focused web design.",
+            title: "Game Developer Intern | Crimson Insights",
+            brief: "Developed 2D mobile games from concept to launch while refining and monetizing existing projects for publication.",
+            mainImg: "https://placehold.co/800x400/ea580c/white?text=Crimson+Insights", // Update with a relevant image
+            videoUrl: "", // Leave empty if you don't have a video, or add a link if you do!
+            about: `During my internship at Crimson Insights, I worked extensively across a portfolio of 2D mobile titles. My responsibilities were split between rapid development—taking high-level game concepts from management and building them from scratch—and maintaining existing projects. This involved debugging code, transforming assets, and integrating the IronSource SDK for ad monetization. I also managed the final build pipeline, generating .aab files for official store releases.`,
             details: [
-                { img: "https://placehold.co/400x300/1e293b/white?text=Figma", title: "Prototyping", desc: "High fidelity wireframes." }
+                { 
+                    img: "https://placehold.co/400x300/1e293b/white?text=Prototyping", 
+                    title: "Rapid Game Development", 
+                    desc: "Built multiple 2D mobile games entirely from scratch, taking core ideas from management and developing them into fully playable, polished products." 
+                },
+                { 
+                    img: "https://placehold.co/400x300/1e293b/white?text=IronSource+SDK", 
+                    title: "Ad Monetization", 
+                    desc: "Implemented comprehensive monetization loops using the IronSource SDK, successfully integrating banner, interstitial, and rewarded video ads into live projects." 
+                },
+                { 
+                    img: "https://placehold.co/400x300/1e293b/white?text=AAB+Builds", 
+                    title: "Optimization & Deployment", 
+                    desc: "Refined existing codebases by fixing bugs and updating features, ultimately managing the Android build process to generate launch-ready .aab files." 
+                },
+                { 
+                    img: "https://placehold.co/400x300/1e293b/white?text=Team+Coordination", 
+                    title: "Asset Integration", 
+                    desc: "Collaborated directly with the art department to request, transform, and seamlessly integrate 2D sprites and UI elements into the Unity engine." 
+                }
             ]
-        },
+        }
     ]
 };
 
