@@ -186,6 +186,9 @@ header {
     margin: 0 auto 50px auto;
     padding: 0 20px;
 }
+.content-container.wide-layout {
+    max-width: 1200px;
+}
 
 .card {
     display: flex;
@@ -206,6 +209,14 @@ header {
 .card-img-wrapper {
     width: 40%;
     height: 250px;
+    overflow: hidden;
+}
+.content-container.wide-layout .card-img-wrapper {
+    height: 350px; /* Bumps the height to match the new massive width */
+}
+.card-img-wrapper-skills {
+    width: 100%;
+    height: 450px;
     overflow: hidden;
 }
 

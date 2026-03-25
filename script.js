@@ -337,8 +337,36 @@ const portfolioData = {
                 }
             ]
         }
+    
+    // ... end of experience array
+    ],
+    skills: [
+        {
+            id: "s1",
+            title: "Animation Rigging & IK",
+            brief: "Utilizing Unity's Animation Rigging package and Inverse Kinematics (IK) to create dynamic, procedural character movements and realistic joint behaviors.",
+            videoUrl: "https://res.cloudinary.com/dpxmy2gbf/video/upload/v1773241260/tank_gameplay_zklhyp.mp4" 
+        },
+        {
+            id: "s2",
+            title: "Inventory Management",
+            brief: "Developing scalable, UI-driven inventory systems featuring item data persistence, stacking logic, and seamless drag-and-drop mechanics.",
+            videoUrl: "https://res.cloudinary.com/dpxmy2gbf/video/upload/v1773241260/tank_gameplay_zklhyp.mp4" 
+        },
+        {
+            id: "s3",
+            title: "Fast Travel System",
+            brief: "Implementing seamless point-to-point map teleportation logic, handling player state saving, scene transitions, and loading screens.",
+            videoUrl: "https://res.cloudinary.com/dpxmy2gbf/video/upload/v1773241260/tank_gameplay_zklhyp.mp4" 
+        },
+        {
+            id: "s4",
+            title: "Runtime Image Capturing",
+            brief: "Building an in-game camera architecture to capture render textures, process them into 2D images, and save screenshots locally during runtime.",
+            videoUrl: "https://res.cloudinary.com/dpxmy2gbf/video/upload/v1773241260/tank_gameplay_zklhyp.mp4" 
+        }
     ]
-};
+}; // End of portfolioData
 
 /* --- SHARED: Populate Dropdowns --- */
 /* --- SHARED: Populate Dropdowns --- */
@@ -373,30 +401,56 @@ function populateDropdowns() {
 }
 
 /* --- INDEX PAGE LOGIC --- */
+/* --- INDEX PAGE LOGIC --- */
 function initIndexPage() {
     const container = document.getElementById('list-container');
     const tabBtns = document.querySelectorAll('.tab-btn');
 
-    function renderList(type) {
+function renderList(type) {
         container.innerHTML = ''; // Clear current
+        
+        // NEW: Toggle the wide layout class for the skills tab
+        if (type === 'skills') {
+            container.classList.add('wide-layout');
+        } else {
+            container.classList.remove('wide-layout');
+        }
+
         const items = portfolioData[type];
 
         items.forEach(item => {
             const card = document.createElement('div');
             card.className = 'card';
-            // On Click: Open detail in the same tab
-            card.onclick = () => window.location.href = `detail.html?type=${type}&id=${item.id}`;
-            card.innerHTML = `
-                <div class="card-img-wrapper">
-                    <img src="${item.mainImg}" alt="${item.title}" class="card-img">
-                </div>
-                <div class="card-content">
-                    <h2>${item.title}</h2>
-                    <br>
-                    <div class="arrow-indicator">➔</div>
-                    <p>${item.brief}</p>
-                </div>
-            `;
+            
+            // LOGIC FOR SKILLS (Inline Video, No Click)
+            if (type === 'skills') {
+                card.style.cursor = 'default';
+                card.innerHTML = `
+                    <div class="card-img-wrapper">
+                        <video src="${item.videoUrl}" class="card-img" autoplay loop muted playsinline></video>
+                    </div>
+                    <div class="card-content">
+                        <h2>${item.title}</h2>
+                        <br>
+                        <p>${item.brief}</p>
+                    </div>
+                `;
+            } 
+            // LOGIC FOR PROJECTS & EXPERIENCE (Image + Clickable)
+            else {
+                card.onclick = () => window.location.href = `detail.html?type=${type}&id=${item.id}`;
+                card.innerHTML = `
+                    <div class="card-img-wrapper">
+                        <img src="${item.mainImg}" alt="${item.title}" class="card-img">
+                    </div>
+                    <div class="card-content">
+                        <h2>${item.title}</h2>
+                        <br>
+                        <div class="arrow-indicator">➔</div>
+                        <p>${item.brief}</p>
+                    </div>
+                `;
+            }
             container.appendChild(card);
         });
     }
