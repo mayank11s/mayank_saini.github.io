@@ -340,32 +340,54 @@ const portfolioData = {
     
     // ... end of experience array
     ],
-    skills: [
-        {
-            id: "s1",
-            title: "Animation Rigging & IK",
-            brief: "Utilizing Unity's Animation Rigging package and Inverse Kinematics (IK) to create dynamic, procedural character movements and realistic joint behaviors.",
-            videoUrl: "" 
-        },
-        {
-            id: "s2",
-            title: "Inventory Management",
-            brief: "Developing scalable, UI-driven inventory systems featuring item data persistence, stacking logic, and seamless drag-and-drop mechanics.",
-            videoUrl: "" 
-        },
-        {
-            id: "s3",
-            title: "Fast Travel System",
-            brief: "Implementing seamless point-to-point map teleportation logic, handling player state saving, scene transitions, and loading screens.",
-            videoUrl: "" 
-        },
-        {
-            id: "s4",
-            title: "Runtime Image Capturing",
-            brief: "Building an in-game camera architecture to capture render textures, process them into 2D images, and save screenshots locally during runtime.",
-            videoUrl: "" 
-        }
-    ]
+    // showcase: [
+    //     // {
+    //     //     category: "Playable Prototypes",
+    //     //     items: [
+    //     //         {
+    //     //             title: "Life Of Shadow",
+    //     //             brief: "Unfinished 3D puzzle game where.",
+    //     //             videoUrl: "YOUR_CLOUDINARY_LINK_HERE.mp4" 
+    //     //         }
+    //     //     ]
+    //     // },
+    //     {
+    //         category: "Animation Rigging and Multiplayer",
+    //         items: [
+    //             {
+    //                 title:"Holding and Switching Guns",
+    //                 brief: "A third person shooter character with Animation Rigging & IK",
+    //                 videoUrl:""
+    //             }
+    //             // {
+    //             //     title: "Inventory Management System",
+    //             //     brief: "Scalable, UI-driven inventory featuring item data persistence and stacking logic.",
+    //             //     videoUrl: "YOUR_CLOUDINARY_LINK_HERE.mp4" 
+    //             // }
+    //             // ,
+    //             // {
+    //             //     title: "IronSource Ad Integration",
+    //             //     brief: "Complete monetization loop featuring banner, interstitial, and reward ads.",
+    //             //     videoUrl: "YOUR_CLOUDINARY_LINK_HERE.mp4" 
+    //             // }
+    //         ]
+    //     },
+    //     {
+    //         category: "3D Modelling & Animation",
+    //         items: [
+    //             {
+    //                 title: "Animation Rigging & IK",
+    //                 brief: "Procedural character movements and realistic joint behaviors built directly in Unity.",
+    //                 videoUrl: "YOUR_CLOUDINARY_LINK_HERE.mp4" 
+    //             },
+    //             {
+    //                 title: "Blender Asset Creation",
+    //                 brief: "Custom low-poly environment assets modelled, UV unwrapped, and textured in Blender.",
+    //                 videoUrl: "YOUR_CLOUDINARY_LINK_HERE.mp4" 
+    //             }
+    //         ]
+    //     }
+    // ]
 }; // End of portfolioData
 
 /* --- SHARED: Populate Dropdowns --- */
@@ -401,7 +423,6 @@ function populateDropdowns() {
 }
 
 /* --- INDEX PAGE LOGIC --- */
-/* --- INDEX PAGE LOGIC --- */
 function initIndexPage() {
     const container = document.getElementById('list-container');
     const tabBtns = document.querySelectorAll('.tab-btn');
@@ -409,35 +430,45 @@ function initIndexPage() {
 function renderList(type) {
         container.innerHTML = ''; // Clear current
         
-        // NEW: Toggle the wide layout class for the skills tab
-        if (type === 'skills') {
+        // SHOWCASE LOGIC (Categorized Sections + Wide Layout)
+        if (type === 'showcase') {
             container.classList.add('wide-layout');
-        } else {
+            const categories = portfolioData[type];
+
+            categories.forEach(section => {
+                // 1. Create and append the Section Heading
+                const header = document.createElement('h2');
+                header.className = 'showcase-header';
+                header.textContent = section.category;
+                container.appendChild(header);
+
+                // 2. Loop through and append the items for this section
+                section.items.forEach(item => {
+                    const card = document.createElement('div');
+                    card.className = 'card';
+                    card.style.cursor = 'default';
+                    card.innerHTML = `
+                        <div class="card-img-wrapper">
+                            <video src="${item.videoUrl}" class="card-img" autoplay loop muted playsinline></video>
+                        </div>
+                        <div class="card-content">
+                            <h2>${item.title}</h2>
+                            <br>
+                            <p>${item.brief}</p>
+                        </div>
+                    `;
+                    container.appendChild(card);
+                });
+            });
+        } 
+        // PROJECTS & EXPERIENCE LOGIC (Standard Layout)
+        else {
             container.classList.remove('wide-layout');
-        }
+            const items = portfolioData[type];
 
-        const items = portfolioData[type];
-
-        items.forEach(item => {
-            const card = document.createElement('div');
-            card.className = 'card';
-            
-            // LOGIC FOR SKILLS (Inline Video, No Click)
-            if (type === 'skills') {
-                card.style.cursor = 'default';
-                card.innerHTML = `
-                    <div class="card-img-wrapper">
-                        <video src="${item.videoUrl}" class="card-img" autoplay loop muted playsinline></video>
-                    </div>
-                    <div class="card-content">
-                        <h2>${item.title}</h2>
-                        <br>
-                        <p>${item.brief}</p>
-                    </div>
-                `;
-            } 
-            // LOGIC FOR PROJECTS & EXPERIENCE (Image + Clickable)
-            else {
+            items.forEach(item => {
+                const card = document.createElement('div');
+                card.className = 'card';
                 card.onclick = () => window.location.href = `detail.html?type=${type}&id=${item.id}`;
                 card.innerHTML = `
                     <div class="card-img-wrapper">
@@ -450,9 +481,9 @@ function renderList(type) {
                         <p>${item.brief}</p>
                     </div>
                 `;
-            }
-            container.appendChild(card);
-        });
+                container.appendChild(card);
+            });
+        }
     }
 
     // Tab Switching Logic
