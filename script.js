@@ -345,25 +345,25 @@ const portfolioData = {
             id: "s1",
             title: "Animation Rigging & IK",
             brief: "Utilizing Unity's Animation Rigging package and Inverse Kinematics (IK) to create dynamic, procedural character movements and realistic joint behaviors.",
-            videoUrl: "https://res.cloudinary.com/dpxmy2gbf/video/upload/v1773241260/tank_gameplay_zklhyp.mp4" 
+            videoUrl: "" 
         },
         {
             id: "s2",
             title: "Inventory Management",
             brief: "Developing scalable, UI-driven inventory systems featuring item data persistence, stacking logic, and seamless drag-and-drop mechanics.",
-            videoUrl: "https://res.cloudinary.com/dpxmy2gbf/video/upload/v1773241260/tank_gameplay_zklhyp.mp4" 
+            videoUrl: "" 
         },
         {
             id: "s3",
             title: "Fast Travel System",
             brief: "Implementing seamless point-to-point map teleportation logic, handling player state saving, scene transitions, and loading screens.",
-            videoUrl: "https://res.cloudinary.com/dpxmy2gbf/video/upload/v1773241260/tank_gameplay_zklhyp.mp4" 
+            videoUrl: "" 
         },
         {
             id: "s4",
             title: "Runtime Image Capturing",
             brief: "Building an in-game camera architecture to capture render textures, process them into 2D images, and save screenshots locally during runtime.",
-            videoUrl: "https://res.cloudinary.com/dpxmy2gbf/video/upload/v1773241260/tank_gameplay_zklhyp.mp4" 
+            videoUrl: "" 
         }
     ]
 }; // End of portfolioData
